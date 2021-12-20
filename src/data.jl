@@ -194,7 +194,7 @@ mutable struct Renewables
             res.node = node
             res.plant_type = plant_type
 
-            res.sigma_factor =  0.2
+            res.sigma_factor =  0.1
             
             res.mu_rt = availability_rt * g_max
             res.sigma_rt = res.mu_rt * res.sigma_factor
@@ -224,13 +224,15 @@ mutable struct Plant
     d_max::Float64
     h_max::Float64
     eta::Float64
+    availability::Float64
     plant_type::Any
     # Optional Attributes
     storage_capacity::Float64
     inflow::Array
     storage_start::Float64
     storage_end::Float64
-    storage_level::Array
+    storage_level_start::Array
+    storage_level_end::Array
     
     function Plant(index::Int,
                    name::Any,
@@ -238,6 +240,7 @@ mutable struct Plant
                    mc_el::Float64,
                    mc_heat::Float64,
                    eta::Float64,
+                   availability::Float64,
                    g_max::Float64,
                    h_max::Float64,
                    plant_type::Any)
@@ -248,6 +251,7 @@ mutable struct Plant
         p.mc_el = mc_el
         p.mc_heat = mc_heat
         p.eta = eta
+        p.availability = availability
         p.g_max = g_max
         p.h_max = h_max
         p.plant_type = plant_type

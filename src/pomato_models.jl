@@ -16,22 +16,38 @@ function add_optimizer!(pomato::POMATO)
 	global optimizer_package
 	set_optimizer(pomato.model, optimizer)
 	if string(optimizer_package) == "Gurobi"
-		set_optimizer_attributes(pomato.model, "Method" => 3,
-								 "Threads" => Threads.nthreads() - 2 < 0 ? 0 : Threads.nthreads() - 2,
-								 "LogFile" => pomato.data.folders["result_dir"]*"/log.txt")
-	end
+		set_optimizer_attributes(
+			pomato.model, 
+			"LogFile" => pomato.data.folders["result_dir"]*"/log.txt")
+		end
+		if "solver_options" in keys(pomato.options)
+			@info("Adding user solver options: ")
+			for option in keys(pomato.options["solver_options"])
+				@info("$(option): $(pomato.options["solver_options"][option])")
+				set_optimizer_attribute(
+					pomato.model, option, pomato.options["solver_options"][option])
+			end
+		else
+			@info("Adding default solver options for Gurobi: Method 1, Threads: $(Threads.nthreads() - 2)")
+			set_optimizer_attribute(pomato.model, "Method", 1)
+			set_optimizer_attribute(pomato.model, "Threads", Threads.nthreads() - 2)
+		end
 end
 
 function market_model(data::Data, options::Dict{String, Any})
 
 	pomato = POMATO(Model(), data, options)
 
+	if options["timeseries"]["type"] == "da"
+		set_da_timeseries!(data)
+	end
+
 	add_optimizer!(pomato)
 
-	@info("Adding Variables and Expressions..")
+	@info("Adding Variables and Expressions...")
 	add_variables_expressions!(pomato)
 
-	@info("Add Base Model")
+	@info("Adding Base Model...")
 	add_electricity_generation_constraints!(pomato)
 	add_electricity_storage_constraints!(pomato)
 
@@ -87,14 +103,14 @@ function market_model(data::Data, options::Dict{String, Any})
 	add_electricity_energy_balance!(pomato::POMATO)
 
 	@info("Adding Objective Function...")
-	add_objective!(pomato)
+	add_objective!(pomato);
 
 	@info("Solving...")
 	t_start = time_ns()
 	@time JuMP.optimize!(pomato.model)
 	@info("Termination Status: $(JuMP.termination_status(pomato.model))")
 	if JuMP.termination_status(pomato.model) == MOI.INFEASIBLE
-		check_infeasibility(pomato)
+		# check_infeasibility(pomato)
 		throw("Model is Infeasible. See stored information from Gurobi constraint conflics.")
 	elseif JuMP.termination_status(pomato.model) != MOI.OPTIMAL
 		@info("Termination Status not optimal, check solution for feasibility.")
@@ -110,10 +126,7 @@ end
 
 function redispatch_model(market_result::Result, data::Data, options::Dict{String, Any})
 
-	# set_rt_timeseries!(data)
-	# pomato = market_model(data, options)
-	# set_rt_timeseries!(pomato.data)
-
+	set_rt_timeseries!(data)
 	redispatch_results = Dict{String, Result}()
 	redispatch_results["market_results"] = market_result
 
@@ -144,7 +157,7 @@ function redispatch_model(market_result::Result, data::Data, options::Dict{Strin
 		tmp_results = Dict{String, Result}()
 		# for timesteps in [t.index:t.index for t in data_copy.t]
 		model_horizon_segments = split_timeseries_segments(data, options["timeseries"]["redispatch_horizon"])
-		for timesteps in model_horizon_segments
+		for timesteps in model_horizon_segments #[1:1]
 			# data = deepcopy(data_copy)
 			pomato = solve_redispatch_model(deepcopy(data_copy), deepcopy(market_result_variables_copy), options, timesteps, zones)
 			tmp_results[data_copy.t[timesteps][1].name] = add_result!(pomato)
@@ -178,7 +191,7 @@ function solve_redispatch_model(data::Data, market_result_variables::Dict{String
 	@info("Solvetime: $(round(t_elapsed*1e-9, digits=2)) seconds")
 
 	if JuMP.termination_status(pomato.model) != MOI.OPTIMAL
-		check_infeasibility(pomato)
+		# check_infeasibility(pomato)
 	end
 	return pomato
 end

@@ -1,0 +1,548 @@
+index,timestep,plant,storage_start,storage_end
+0,t0001,n3303_electricity/solar battery,0.0,0.0
+1,t0001,n3304_electricity/solar battery,0.0,0.0
+2,t0001,n3305_electricity/solar battery,0.0,0.0
+3,t0001,n3306_electricity/solar battery,0.0,0.0
+4,t0001,n3307_electricity/solar battery,0.0,0.0
+5,t0001,n3308_electricity/solar battery,0.0,0.0
+6,t0001,n3309_electricity/solar battery,0.0,0.0
+7,t0001,n3310_electricity/solar battery,0.0,0.0
+8,t0001,n3311_electricity/solar battery,0.0,0.0
+9,t0001,n3312_electricity/solar battery,0.0,0.0
+10,t0001,n3313_electricity/solar battery,0.0,0.0
+11,t0001,n3314_electricity/solar battery,0.0,0.0
+12,t0001,n3315_electricity/solar battery,0.0,0.0
+13,t0001,n3316_electricity/solar battery,0.0,0.0
+14,t0001,n3317_electricity/solar battery,0.0,0.0
+15,t0001,n3318_electricity/solar battery,0.0,0.0
+16,t0001,n3319_electricity/solar battery,0.0,0.0
+17,t0001,n3320_electricity/solar battery,0.0,0.0
+18,t0001,n3321_electricity/solar battery,0.0,0.0
+19,t0001,n3322_electricity/solar battery,0.0,0.0
+20,t0001,n3323_electricity/solar battery,0.0,0.0
+21,t0001,n3324_electricity/solar battery,0.0,0.0
+22,t0001,n3453_electricity/solar battery,0.0,0.0
+23,t0001,n3454_electricity/solar battery,0.0,0.0
+24,t0001,n3455_electricity/solar battery,0.0,0.0
+25,t0001,n3456_electricity/solar battery,0.0,0.0
+26,t0001,n3457_electricity/solar battery,0.0,0.0
+27,t0001,n3458_electricity/solar battery,0.0,0.0
+28,t0001,n3459_electricity/solar battery,0.0,0.0
+29,t0001,n3460_electricity/solar battery,0.0,0.0
+30,t0001,n3461_electricity/solar battery,0.0,0.0
+31,t0001,n3462_electricity/solar battery,0.0,0.0
+32,t0001,n3463_electricity/solar battery,0.0,0.0
+33,t0001,n3464_electricity/solar battery,0.0,0.0
+34,t0001,n3465_electricity/solar battery,0.0,0.0
+35,t0001,n3466_electricity/solar battery,0.0,0.0
+36,t0001,n3467_electricity/solar battery,0.0,0.0
+37,t0001,n3468_electricity/solar battery,0.0,0.0
+38,t0001,n3469_electricity/solar battery,0.0,0.0
+39,t0001,n3470_electricity/solar battery,0.0,0.0
+40,t0001,n3471_electricity/solar battery,0.0,0.0
+41,t0001,n3472_electricity/solar battery,0.0,0.0
+42,t0001,n3473_electricity/solar battery,0.0,0.0
+43,t0001,n3474_electricity/solar battery,0.0,0.0
+44,t0001,n3475_electricity/solar battery,0.0,0.0
+45,t0001,n3476_electricity/solar battery,0.0,0.0
+46,t0001,n3477_electricity/solar battery,0.0,0.0
+47,t0001,n3478_electricity/solar battery,0.0,0.0
+48,t0001,n3479_electricity/solar battery,0.0,0.0
+49,t0001,n3480_electricity/solar battery,0.0,0.0
+50,t0001,n3481_electricity/solar battery,0.0,0.0
+51,t0001,n3482_electricity/solar battery,0.0,0.0
+52,t0001,n3483_electricity/solar battery,0.0,0.0
+53,t0001,n3484_electricity/solar battery,0.0,0.0
+54,t0001,n3485_electricity/solar battery,0.0,0.0
+55,t0001,n3486_electricity/solar battery,0.0,0.0
+56,t0001,n3487_electricity/solar battery,0.0,0.0
+57,t0001,n3488_electricity/solar battery,0.0,0.0
+58,t0001,n3489_electricity/solar battery,0.0,0.0
+59,t0001,n3490_electricity/solar battery,0.0,0.0
+60,t0001,n3491_electricity/solar battery,0.0,0.0
+61,t0001,n3492_electricity/solar battery,0.0,0.0
+62,t0001,n3493_electricity/solar battery,0.0,0.0
+63,t0001,n3494_electricity/solar battery,0.0,0.0
+64,t0001,n3495_electricity/solar battery,0.0,0.0
+65,t0001,n3496_electricity/solar battery,0.0,0.0
+66,t0001,n3497_electricity/solar battery,0.0,0.0
+67,t0001,n3498_electricity/solar battery,0.0,0.0
+68,t0001,n3499_electricity/solar battery,0.0,0.0
+69,t0001,n3500_electricity/solar battery,0.0,0.0
+70,t0001,n3501_electricity/solar battery,0.0,0.0
+71,t0001,n3502_electricity/solar battery,0.0,0.0
+72,t0001,n3503_electricity/solar battery,0.0,0.0
+73,t0001,n3504_electricity/solar battery,0.0,0.0
+74,t0001,n3505_electricity/solar battery,0.0,0.0
+75,t0001,n3507_electricity/solar battery,0.0,0.0
+76,t0001,n3848_electricity/solar battery,0.0,0.0
+77,t0001,n4496_electricity/solar battery,0.0,0.0
+78,t0001,n4497_electricity/solar battery,0.0,0.0
+79,t0001,n4498_electricity/solar battery,0.0,0.0
+80,t0001,n4499_electricity/solar battery,0.0,0.0
+81,t0001,n4500_electricity/solar battery,0.0,0.0
+82,t0001,n4501_electricity/solar battery,0.0,0.0
+83,t0001,n4502_electricity/solar battery,0.0,0.0
+84,t0001,n4503_electricity/solar battery,0.0,0.0
+85,t0001,n4504_electricity/solar battery,0.0,0.0
+86,t0001,n4505_electricity/solar battery,0.0,0.0
+87,t0001,n4506_electricity/solar battery,0.0,0.0
+88,t0001,n4507_electricity/solar battery,0.0,0.0
+89,t0001,n4508_electricity/solar battery,0.0,0.0
+90,t0001,n4509_electricity/solar battery,0.0,0.0
+91,t0001,n4510_electricity/solar battery,0.0,0.0
+92,t0001,n4511_electricity/solar battery,0.0,0.0
+93,t0001,n4512_electricity/solar battery,0.0,0.0
+94,t0001,n4513_electricity/solar battery,0.0,0.0
+95,t0001,n4514_electricity/solar battery,0.0,0.0
+96,t0001,n4515_electricity/solar battery,0.0,0.0
+97,t0001,n4516_electricity/solar battery,0.0,0.0
+98,t0001,n4517_electricity/solar battery,0.0,0.0
+99,t0001,n4518_electricity/solar battery,0.0,0.0
+100,t0001,n4519_electricity/solar battery,0.0,0.0
+101,t0001,n4520_electricity/solar battery,0.0,0.0
+102,t0001,n4521_electricity/solar battery,0.0,0.0
+103,t0001,n4522_electricity/solar battery,0.0,0.0
+104,t0001,n4523_electricity/solar battery,0.0,0.0
+105,t0001,n4524_electricity/solar battery,0.0,0.0
+106,t0001,n4525_electricity/solar battery,0.0,0.0
+107,t0001,n4526_electricity/solar battery,0.0,0.0
+108,t0001,n4527_electricity/solar battery,0.0,0.0
+109,t0001,n4528_electricity/solar battery,0.0,0.0
+110,t0001,n4529_electricity/solar battery,0.0,0.0
+111,t0001,n4530_electricity/solar battery,0.0,0.0
+112,t0001,n4531_electricity/solar battery,0.0,0.0
+113,t0001,n4532_electricity/solar battery,0.0,0.0
+114,t0001,n4533_electricity/solar battery,0.0,0.0
+115,t0001,n4534_electricity/solar battery,0.0,0.0
+116,t0001,n4535_electricity/solar battery,0.0,0.0
+117,t0001,n4536_electricity/solar battery,0.0,0.0
+118,t0001,n4537_electricity/solar battery,0.0,0.0
+119,t0001,n4538_electricity/solar battery,0.0,0.0
+120,t0001,n4539_electricity/solar battery,0.0,0.0
+121,t0001,n4540_electricity/solar battery,0.0,0.0
+122,t0001,n4541_electricity/solar battery,0.0,0.0
+123,t0001,n4542_electricity/solar battery,0.0,0.0
+124,t0001,n4543_electricity/solar battery,0.0,0.0
+125,t0001,n4544_electricity/solar battery,0.0,0.0
+126,t0001,n4545_electricity/solar battery,0.0,0.0
+127,t0001,n4546_electricity/solar battery,0.0,0.0
+128,t0001,n4547_electricity/solar battery,0.0,0.0
+129,t0001,n4548_electricity/solar battery,0.0,0.0
+130,t0001,n4549_electricity/solar battery,0.0,0.0
+131,t0001,n4550_electricity/solar battery,0.0,0.0
+132,t0001,n4551_electricity/solar battery,0.0,0.0
+133,t0001,n4552_electricity/solar battery,0.0,0.0
+134,t0001,n4553_electricity/solar battery,0.0,0.0
+135,t0001,n4554_electricity/solar battery,0.0,0.0
+136,t0001,n4555_electricity/solar battery,0.0,0.0
+137,t0001,n4556_electricity/solar battery,0.0,0.0
+138,t0001,n4557_electricity/solar battery,0.0,0.0
+139,t0001,n4558_electricity/solar battery,0.0,0.0
+140,t0001,n4559_electricity/solar battery,0.0,0.0
+141,t0001,n4560_electricity/solar battery,0.0,0.0
+142,t0001,n4561_electricity/solar battery,0.0,0.0
+143,t0001,n4562_electricity/solar battery,0.0,0.0
+144,t0001,n4575_electricity/solar battery,0.0,0.0
+145,t0001,n4576_electricity/solar battery,0.0,0.0
+146,t0001,n4577_electricity/solar battery,0.0,0.0
+147,t0001,n4579_electricity/solar battery,0.0,0.0
+148,t0001,n4580_electricity/solar battery,0.0,0.0
+149,t0001,n4581_electricity/solar battery,0.0,0.0
+150,t0001,n4582_electricity/solar battery,0.0,0.0
+151,t0001,n4583_electricity/solar battery,0.0,0.0
+152,t0001,n4584_electricity/solar battery,0.0,0.0
+153,t0001,n4585_electricity/solar battery,0.0,0.0
+154,t0001,n4586_electricity/solar battery,0.0,0.0
+155,t0001,n4587_electricity/solar battery,0.0,0.0
+156,t0001,n4588_electricity/solar battery,0.0,0.0
+157,t0001,n4589_electricity/solar battery,0.0,0.0
+158,t0001,n4590_electricity/solar battery,0.0,0.0
+159,t0001,n4591_electricity/solar battery,0.0,0.0
+160,t0001,n4592_electricity/solar battery,0.0,0.0
+161,t0001,n4593_electricity/solar battery,0.0,0.0
+162,t0001,n4594_electricity/solar battery,0.0,0.0
+163,t0001,n4595_electricity/solar battery,0.0,0.0
+164,t0001,n4596_electricity/solar battery,0.0,0.0
+165,t0001,n4597_electricity/solar battery,0.0,0.0
+166,t0001,n4598_electricity/solar battery,0.0,0.0
+167,t0001,n4599_electricity/solar battery,0.0,0.0
+168,t0001,n4600_electricity/solar battery,0.0,0.0
+169,t0001,n4601_electricity/solar battery,0.0,0.0
+170,t0001,n4602_electricity/solar battery,0.0,0.0
+171,t0001,n4603_electricity/solar battery,0.0,0.0
+172,t0001,n4604_electricity/solar battery,0.0,0.0
+173,t0001,n4605_electricity/solar battery,0.0,0.0
+174,t0001,n4606_electricity/solar battery,0.0,0.0
+175,t0001,n4607_electricity/solar battery,0.0,0.0
+176,t0001,n4608_electricity/solar battery,0.0,0.0
+177,t0001,n4609_electricity/solar battery,0.0,0.0
+178,t0001,n4610_electricity/solar battery,0.0,0.0
+179,t0001,n4611_electricity/solar battery,0.0,0.0
+180,t0001,n4612_electricity/solar battery,0.0,0.0
+181,t0001,n4613_electricity/solar battery,0.0,0.0
+182,t0001,n4614_electricity/solar battery,0.0,0.0
+183,t0001,n4615_electricity/solar battery,0.0,0.0
+184,t0001,n4616_electricity/solar battery,0.0,0.0
+185,t0001,n4617_electricity/solar battery,0.0,0.0
+186,t0001,n4618_electricity/solar battery,0.0,0.0
+187,t0001,n4619_electricity/solar battery,0.0,0.0
+188,t0001,n4620_electricity/solar battery,0.0,0.0
+189,t0001,n4621_electricity/solar battery,0.0,0.0
+190,t0001,n4622_electricity/solar battery,0.0,0.0
+191,t0001,n4623_electricity/solar battery,0.0,0.0
+192,t0001,n4624_electricity/solar battery,0.0,0.0
+193,t0001,n4625_electricity/solar battery,0.0,0.0
+194,t0001,n4626_electricity/solar battery,0.0,0.0
+195,t0001,n4627_electricity/solar battery,0.0,0.0
+196,t0001,n4628_electricity/solar battery,0.0,0.0
+197,t0001,n4629_electricity/solar battery,0.0,0.0
+198,t0001,n4630_electricity/solar battery,0.0,0.0
+199,t0001,n4631_electricity/solar battery,0.0,0.0
+200,t0001,n4632_electricity/solar battery,0.0,0.0
+201,t0001,n4633_electricity/solar battery,0.0,0.0
+202,t0001,n4634_electricity/solar battery,0.0,0.0
+203,t0001,n4635_electricity/solar battery,0.0,0.0
+204,t0001,n4636_electricity/solar battery,0.0,0.0
+205,t0001,n4637_electricity/solar battery,0.0,0.0
+206,t0001,n4638_electricity/solar battery,0.0,0.0
+207,t0001,n4639_electricity/solar battery,0.0,0.0
+208,t0001,n4640_electricity/solar battery,0.0,0.0
+209,t0001,n4641_electricity/solar battery,0.0,0.0
+210,t0001,n4642_electricity/solar battery,0.0,0.0
+211,t0001,n4643_electricity/solar battery,0.0,0.0
+212,t0001,n4644_electricity/solar battery,0.0,0.0
+213,t0001,n4645_electricity/solar battery,0.0,0.0
+214,t0001,n4646_electricity/solar battery,0.0,0.0
+215,t0001,n4647_electricity/solar battery,0.0,0.0
+216,t0001,n4648_electricity/solar battery,0.0,0.0
+217,t0001,n4649_electricity/solar battery,0.0,0.0
+218,t0001,n4650_electricity/solar battery,0.0,0.0
+219,t0001,n4651_electricity/solar battery,0.0,0.0
+220,t0001,n4652_electricity/solar battery,0.0,0.0
+221,t0001,n4653_electricity/solar battery,0.0,0.0
+222,t0001,n4654_electricity/solar battery,0.0,0.0
+223,t0001,n4655_electricity/solar battery,0.0,0.0
+224,t0001,n4656_electricity/solar battery,0.0,0.0
+225,t0001,n4657_electricity/solar battery,0.0,0.0
+226,t0001,n4658_electricity/solar battery,0.0,0.0
+227,t0001,n4659_electricity/solar battery,0.0,0.0
+228,t0001,n4660_electricity/solar battery,0.0,0.0
+229,t0001,n4661_electricity/solar battery,0.0,0.0
+230,t0001,n4662_electricity/solar battery,0.0,0.0
+231,t0001,n4663_electricity/solar battery,0.0,0.0
+232,t0001,n4664_electricity/solar battery,0.0,0.0
+233,t0001,n4665_electricity/solar battery,0.0,0.0
+234,t0001,n4666_electricity/solar battery,0.0,0.0
+235,t0001,n4667_electricity/solar battery,0.0,0.0
+236,t0001,n4668_electricity/solar battery,0.0,0.0
+237,t0001,n4669_electricity/solar battery,0.0,0.0
+238,t0001,n4670_electricity/solar battery,0.0,0.0
+239,t0001,n4671_electricity/solar battery,0.0,0.0
+240,t0001,n4672_electricity/solar battery,0.0,0.0
+241,t0001,n4673_electricity/solar battery,0.0,0.0
+242,t0001,n4674_electricity/solar battery,0.0,0.0
+243,t0001,n4675_electricity/solar battery,0.0,0.0
+244,t0001,n4676_electricity/solar battery,0.0,0.0
+245,t0001,n4677_electricity/solar battery,0.0,0.0
+246,t0001,n4678_electricity/solar battery,0.0,0.0
+247,t0001,n4679_electricity/solar battery,0.0,0.0
+248,t0001,n4680_electricity/solar battery,0.0,0.0
+249,t0001,n4681_electricity/solar battery,0.0,0.0
+250,t0001,n4682_electricity/solar battery,0.0,0.0
+251,t0001,n4683_electricity/solar battery,0.0,0.0
+252,t0001,n4684_electricity/solar battery,0.0,0.0
+253,t0001,n4685_electricity/solar battery,0.0,0.0
+254,t0001,n4686_electricity/solar battery,0.0,0.0
+255,t0001,n4687_electricity/solar battery,0.0,0.0
+256,t0001,n4688_electricity/solar battery,0.0,0.0
+257,t0001,n4689_electricity/solar battery,0.0,0.0
+258,t0001,n4690_electricity/solar battery,0.0,0.0
+259,t0001,n4691_electricity/solar battery,0.0,0.0
+260,t0001,n4692_electricity/solar battery,0.0,0.0
+261,t0001,n4693_electricity/solar battery,0.0,0.0
+262,t0001,n4694_electricity/solar battery,0.0,0.0
+263,t0001,n4695_electricity/solar battery,0.0,0.0
+264,t0001,n4696_electricity/solar battery,0.0,0.0
+265,t0001,n4697_electricity/solar battery,0.0,0.0
+266,t0001,n4698_electricity/solar battery,0.0,0.0
+267,t0001,n4699_electricity/solar battery,0.0,0.0
+268,t0001,n4700_electricity/solar battery,0.0,0.0
+269,t0001,n4701_electricity/solar battery,0.0,0.0
+270,t0001,n4702_electricity/solar battery,0.0,0.0
+271,t0001,n4703_electricity/solar battery,0.0,0.0
+272,t0001,n4704_electricity/solar battery,0.0,0.0
+273,t0001,n4705_electricity/solar battery,0.0,0.0
+274,t0001,n4706_electricity/solar battery,0.0,0.0
+275,t0001,n4707_electricity/solar battery,0.0,0.0
+276,t0001,n4708_electricity/solar battery,0.0,0.0
+277,t0001,n4709_electricity/solar battery,0.0,0.0
+278,t0001,n4710_electricity/solar battery,0.0,0.0
+279,t0001,n4711_electricity/solar battery,0.0,0.0
+280,t0001,n4712_electricity/solar battery,0.0,0.0
+281,t0001,n4713_electricity/solar battery,0.0,0.0
+282,t0001,n4714_electricity/solar battery,0.0,0.0
+283,t0001,n4715_electricity/solar battery,0.0,0.0
+284,t0001,n4716_electricity/solar battery,0.0,0.0
+285,t0001,n4717_electricity/solar battery,0.0,0.0
+286,t0001,n4718_electricity/solar battery,0.0,0.0
+287,t0001,n4719_electricity/solar battery,0.0,0.0
+288,t0001,n4720_electricity/solar battery,0.0,0.0
+289,t0001,n4721_electricity/solar battery,0.0,0.0
+290,t0001,n4722_electricity/solar battery,0.0,0.0
+291,t0001,n4723_electricity/solar battery,0.0,0.0
+292,t0001,n4724_electricity/solar battery,0.0,0.0
+293,t0001,n4725_electricity/solar battery,0.0,0.0
+294,t0001,n4726_electricity/solar battery,0.0,0.0
+295,t0001,n4727_electricity/solar battery,0.0,0.0
+296,t0001,n4728_electricity/solar battery,0.0,0.0
+297,t0001,n4729_electricity/solar battery,0.0,0.0
+298,t0001,n4730_electricity/solar battery,0.0,0.0
+299,t0001,n4731_electricity/solar battery,0.0,0.0
+300,t0001,n4732_electricity/solar battery,0.0,0.0
+301,t0001,n4733_electricity/solar battery,0.0,0.0
+302,t0001,n4734_electricity/solar battery,0.0,0.0
+303,t0001,n4735_electricity/solar battery,0.0,0.0
+304,t0001,n4736_electricity/solar battery,0.0,0.0
+305,t0001,n4737_electricity/solar battery,0.0,0.0
+306,t0001,n4738_electricity/solar battery,0.0,0.0
+307,t0001,n4739_electricity/solar battery,0.0,0.0
+308,t0001,n4740_electricity/solar battery,0.0,0.0
+309,t0001,n4741_electricity/solar battery,0.0,0.0
+310,t0001,n4742_electricity/solar battery,0.0,0.0
+311,t0001,n4743_electricity/solar battery,0.0,0.0
+312,t0001,n4744_electricity/solar battery,0.0,0.0
+313,t0001,n4745_electricity/solar battery,0.0,0.0
+314,t0001,n4746_electricity/solar battery,0.0,0.0
+315,t0001,n4747_electricity/solar battery,0.0,0.0
+316,t0001,n4748_electricity/solar battery,0.0,0.0
+317,t0001,n4749_electricity/solar battery,0.0,0.0
+318,t0001,n4750_electricity/solar battery,0.0,0.0
+319,t0001,n4751_electricity/solar battery,0.0,0.0
+320,t0001,n4752_electricity/solar battery,0.0,0.0
+321,t0001,n4753_electricity/solar battery,0.0,0.0
+322,t0001,n4754_electricity/solar battery,0.0,0.0
+323,t0001,n4755_electricity/solar battery,0.0,0.0
+324,t0001,n4756_electricity/solar battery,0.0,0.0
+325,t0001,n4757_electricity/solar battery,0.0,0.0
+326,t0001,n4758_electricity/solar battery,0.0,0.0
+327,t0001,n4759_electricity/solar battery,0.0,0.0
+328,t0001,n4760_electricity/solar battery,0.0,0.0
+329,t0001,n4761_electricity/solar battery,0.0,0.0
+330,t0001,n4762_electricity/solar battery,0.0,0.0
+331,t0001,n4763_electricity/solar battery,0.0,0.0
+332,t0001,n4764_electricity/solar battery,0.0,0.0
+333,t0001,n4765_electricity/solar battery,0.0,0.0
+334,t0001,n4766_electricity/solar battery,0.0,0.0
+335,t0001,n4767_electricity/solar battery,0.0,0.0
+336,t0001,n4768_electricity/solar battery,0.0,0.0
+337,t0001,n4769_electricity/solar battery,0.0,0.0
+338,t0001,n4770_electricity/solar battery,0.0,0.0
+339,t0001,n4771_electricity/solar battery,0.0,0.0
+340,t0001,n4772_electricity/solar battery,0.0,0.0
+341,t0001,n4773_electricity/solar battery,0.0,0.0
+342,t0001,n4774_electricity/solar battery,0.0,0.0
+343,t0001,n4775_electricity/solar battery,0.0,0.0
+344,t0001,n4776_electricity/solar battery,0.0,0.0
+345,t0001,n4777_electricity/solar battery,0.0,0.0
+346,t0001,n4778_electricity/solar battery,0.0,0.0
+347,t0001,n4779_electricity/solar battery,0.0,0.0
+348,t0001,n4780_electricity/solar battery,0.0,0.0
+349,t0001,n4781_electricity/solar battery,0.0,0.0
+350,t0001,n4782_electricity/solar battery,0.0,0.0
+351,t0001,n4783_electricity/solar battery,0.0,0.0
+352,t0001,n4784_electricity/solar battery,0.0,0.0
+353,t0001,n4785_electricity/solar battery,0.0,0.0
+354,t0001,n4786_electricity/solar battery,0.0,0.0
+355,t0001,n4787_electricity/solar battery,0.0,0.0
+356,t0001,n4788_electricity/solar battery,0.0,0.0
+357,t0001,n4789_electricity/solar battery,0.0,0.0
+358,t0001,n4790_electricity/solar battery,0.0,0.0
+359,t0001,n4791_electricity/solar battery,0.0,0.0
+360,t0001,n4844_electricity/solar battery,0.0,0.0
+361,t0001,n4845_electricity/solar battery,0.0,0.0
+362,t0001,n4846_electricity/solar battery,0.0,0.0
+363,t0001,n4847_electricity/solar battery,0.0,0.0
+364,t0001,n4848_electricity/solar battery,0.0,0.0
+365,t0001,n4852_electricity/solar battery,0.0,0.0
+366,t0001,n4854_electricity/solar battery,0.0,0.0
+367,t0001,n4855_electricity/solar battery,0.0,0.0
+368,t0001,n5534_electricity/solar battery,0.0,0.0
+369,t0001,n5535_electricity/solar battery,0.0,0.0
+370,t0001,n5536_electricity/solar battery,0.0,0.0
+371,t0001,n5537_electricity/solar battery,0.0,0.0
+372,t0001,n5538_electricity/solar battery,0.0,0.0
+373,t0001,n5539_electricity/solar battery,0.0,0.0
+374,t0001,n5540_electricity/solar battery,0.0,0.0
+375,t0001,n5541_electricity/solar battery,0.0,0.0
+376,t0001,n5542_electricity/solar battery,0.0,0.0
+377,t0001,n5543_electricity/solar battery,0.0,0.0
+378,t0001,n5544_electricity/solar battery,0.0,0.0
+379,t0001,n5545_electricity/solar battery,0.0,0.0
+380,t0001,n5546_electricity/solar battery,0.0,0.0
+381,t0001,n5547_electricity/solar battery,0.0,0.0
+382,t0001,n5549_electricity/solar battery,0.0,0.0
+383,t0001,n5550_electricity/solar battery,0.0,0.0
+384,t0001,n5551_electricity/solar battery,0.0,0.0
+385,t0001,n5552_electricity/solar battery,0.0,0.0
+386,t0001,n5553_electricity/solar battery,0.0,0.0
+387,t0001,n5554_electricity/solar battery,0.0,0.0
+388,t0001,n5555_electricity/solar battery,0.0,0.0
+389,t0001,n5556_electricity/solar battery,0.0,0.0
+390,t0001,n5591_electricity/solar battery,0.0,0.0
+391,t0001,n5592_electricity/solar battery,0.0,0.0
+392,t0001,n5596_electricity/solar battery,0.0,0.0
+393,t0001,n5597_electricity/solar battery,0.0,0.0
+394,t0001,n5598_electricity/solar battery,0.0,0.0
+395,t0001,n5599_electricity/solar battery,0.0,0.0
+396,t0001,n5643_electricity/solar battery,0.0,0.0
+397,t0001,n5644_electricity/solar battery,0.0,0.0
+398,t0001,n5645_electricity/solar battery,0.0,0.0
+399,t0001,n5646_electricity/solar battery,0.0,0.0
+400,t0001,n5649_electricity/solar battery,0.0,0.0
+401,t0001,n5650_electricity/solar battery,0.0,0.0
+402,t0001,n5651_electricity/solar battery,0.0,0.0
+403,t0001,n5653_electricity/solar battery,0.0,0.0
+404,t0001,n5654_electricity/solar battery,0.0,0.0
+405,t0001,n5655_electricity/solar battery,0.0,0.0
+406,t0001,n5656_electricity/solar battery,0.0,0.0
+407,t0001,n5657_electricity/solar battery,0.0,0.0
+408,t0001,n5658_electricity/solar battery,0.0,0.0
+409,t0001,n5659_electricity/solar battery,0.0,0.0
+410,t0001,n5660_electricity/solar battery,0.0,0.0
+411,t0001,n5661_electricity/solar battery,0.0,0.0
+412,t0001,n5662_electricity/solar battery,0.0,0.0
+413,t0001,n5663_electricity/solar battery,0.0,0.0
+414,t0001,n5664_electricity/solar battery,0.0,0.0
+415,t0001,n5665_electricity/solar battery,0.0,0.0
+416,t0001,n5666_electricity/solar battery,0.0,0.0
+417,t0001,n5667_electricity/solar battery,0.0,0.0
+418,t0001,n5668_electricity/solar battery,0.0,0.0
+419,t0001,n5669_electricity/solar battery,0.0,0.0
+420,t0001,n5670_electricity/solar battery,0.0,0.0
+421,t0001,n5671_electricity/solar battery,0.0,0.0
+422,t0001,n5672_electricity/solar battery,0.0,0.0
+423,t0001,n5673_electricity/solar battery,0.0,0.0
+424,t0001,n5674_electricity/solar battery,0.0,0.0
+425,t0001,n5675_electricity/solar battery,0.0,0.0
+426,t0001,n5676_electricity/solar battery,0.0,0.0
+427,t0001,n5677_electricity/solar battery,0.0,0.0
+428,t0001,n5678_electricity/solar battery,0.0,0.0
+429,t0001,n5679_electricity/solar battery,0.0,0.0
+430,t0001,n5680_electricity/solar battery,0.0,0.0
+431,t0001,n5681_electricity/solar battery,0.0,0.0
+432,t0001,n5682_electricity/solar battery,0.0,0.0
+433,t0001,n5683_electricity/solar battery,0.0,0.0
+434,t0001,n5684_electricity/solar battery,0.0,0.0
+435,t0001,n5685_electricity/solar battery,0.0,0.0
+436,t0001,n5686_electricity/solar battery,0.0,0.0
+437,t0001,n5687_electricity/solar battery,0.0,0.0
+438,t0001,n5688_electricity/solar battery,0.0,0.0
+439,t0001,n5689_electricity/solar battery,0.0,0.0
+440,t0001,n5690_electricity/solar battery,0.0,0.0
+441,t0001,n5692_electricity/solar battery,0.0,0.0
+442,t0001,n5693_electricity/solar battery,0.0,0.0
+443,t0001,n5694_electricity/solar battery,0.0,0.0
+444,t0001,n5695_electricity/solar battery,0.0,0.0
+445,t0001,n5696_electricity/solar battery,0.0,0.0
+446,t0001,n5697_electricity/solar battery,0.0,0.0
+447,t0001,n5710_electricity/solar battery,0.0,0.0
+448,t0001,n5711_electricity/solar battery,0.0,0.0
+449,t0001,n5714_electricity/solar battery,0.0,0.0
+450,t0001,n5732_electricity/solar battery,0.0,0.0
+451,t0001,n5733_electricity/solar battery,0.0,0.0
+452,t0001,n5734_electricity/solar battery,0.0,0.0
+453,t0001,n5735_electricity/solar battery,0.0,0.0
+454,t0001,n5738_electricity/solar battery,0.0,0.0
+455,t0001,n5739_electricity/solar battery,0.0,0.0
+456,t0001,n5740_electricity/solar battery,0.0,0.0
+457,t0001,H1047,0.65,0.65
+458,t0001,H1057,0.65,0.65
+459,t0001,H1065,0.65,0.65
+460,t0001,H111,0.65,0.65
+461,t0001,H1115,0.65,0.65
+462,t0001,H12,0.65,0.65
+463,t0001,H13,0.65,0.65
+464,t0001,H134,0.65,0.65
+465,t0001,H135,0.65,0.65
+466,t0001,H153,0.65,0.65
+467,t0001,H160,0.65,0.65
+468,t0001,H1707,0.65,0.65
+469,t0001,H177,0.65,0.65
+470,t0001,H1833,0.65,0.65
+471,t0001,H184,0.65,0.65
+472,t0001,H1869,0.65,0.65
+473,t0001,H1891,0.65,0.65
+474,t0001,H1999,0.65,0.65
+475,t0001,H20,0.65,0.65
+476,t0001,H208,0.65,0.65
+477,t0001,H209,0.65,0.65
+478,t0001,H21,0.65,0.65
+479,t0001,H2168,0.65,0.65
+480,t0001,H23,0.65,0.65
+481,t0001,H24,0.65,0.65
+482,t0001,H241,0.65,0.65
+483,t0001,H265,0.65,0.65
+484,t0001,H29,0.65,0.65
+485,t0001,H291,0.65,0.65
+486,t0001,H292,0.65,0.65
+487,t0001,H295,0.65,0.65
+488,t0001,H297,0.65,0.65
+489,t0001,H3,0.65,0.65
+490,t0001,H30,0.65,0.65
+491,t0001,H306,0.65,0.65
+492,t0001,H315,0.65,0.65
+493,t0001,H3299,0.65,0.65
+494,t0001,H330,0.65,0.65
+495,t0001,H3410,0.65,0.65
+496,t0001,H347,0.65,0.65
+497,t0001,H357,0.65,0.65
+498,t0001,H36,0.65,0.65
+499,t0001,H362,0.65,0.65
+500,t0001,H3668,0.65,0.65
+501,t0001,H369,0.65,0.65
+502,t0001,H372,0.65,0.65
+503,t0001,H379,0.65,0.65
+504,t0001,H40,0.65,0.65
+505,t0001,H430,0.65,0.65
+506,t0001,H432,0.65,0.65
+507,t0001,H478,0.65,0.65
+508,t0001,H5,0.65,0.65
+509,t0001,H50,0.65,0.65
+510,t0001,H532,0.65,0.65
+511,t0001,H557,0.65,0.65
+512,t0001,H56,0.65,0.65
+513,t0001,H591,0.65,0.65
+514,t0001,H60,0.65,0.65
+515,t0001,H608,0.65,0.65
+516,t0001,H622,0.65,0.65
+517,t0001,H623,0.65,0.65
+518,t0001,H63,0.65,0.65
+519,t0001,H64,0.65,0.65
+520,t0001,H646,0.65,0.65
+521,t0001,H65,0.65,0.65
+522,t0001,H662,0.65,0.65
+523,t0001,H686,0.65,0.65
+524,t0001,H74,0.65,0.65
+525,t0001,H750,0.65,0.65
+526,t0001,H773,0.65,0.65
+527,t0001,H787,0.65,0.65
+528,t0001,H80,0.65,0.65
+529,t0001,H802,0.65,0.65
+530,t0001,H84,0.65,0.65
+531,t0001,H841,0.65,0.65
+532,t0001,H9,0.65,0.65
+533,t0001,H91,0.65,0.65
+534,t0001,H917,0.65,0.65
+535,t0001,H932,0.65,0.65
+536,t0001,H96,0.65,0.65
+537,t0001,H986,0.65,0.65
+538,t0001,N345,0.65,0.65
+539,t0001,N346,0.65,0.65
+540,t0001,N347,0.65,0.65
+541,t0001,N348,0.65,0.65
+542,t0001,N349,0.65,0.65
+543,t0001,N350,0.65,0.65
+544,t0001,N351,0.65,0.65
+545,t0001,N352,0.65,0.65
+546,t0001,N353,0.65,0.65

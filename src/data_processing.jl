@@ -146,19 +146,21 @@ function populate_plants(raw::RAW)
         node_name = raw.plants[p, :node]
         node_idx = raw.nodes[raw.nodes[:, :index] .== node_name, :int_idx][1]
         eta = raw.plants[p, :eta]*1.
+        availability = raw.plants[p, :availability]*1.
         g_max = raw.plants[p, :g_max]*1.
         h_max = raw.plants[p, :h_max]*1.
         mc_el = raw.plants[p, :mc_el]*1.
         mc_heat = raw.plants[p, :mc_heat]*1.
         plant_type = raw.plants[p, :plant_type]
         newp = Plant(index, name, node_idx, mc_el,
-                     mc_heat, eta, g_max, h_max, plant_type)
+                     mc_heat, eta, availability, g_max, h_max, plant_type)
         if plant_type in union(raw.plant_types["hs"], raw.plant_types["es"])
             inflow_data = raw.inflows[raw.inflows[:, :plant] .== name, :inflow]
             newp.inflow = (length(inflow_data) > 0 ? inflow_data :
                            zeros(length(raw.model_horizon[:, :timesteps])))
             
-            newp.storage_level = raw.storage_level[raw.storage_level[:, :plant] .== name, :storage_level]
+            newp.storage_level_start = raw.storage_level[raw.storage_level[:, :plant] .== name, :storage_start]
+            newp.storage_level_end = raw.storage_level[raw.storage_level[:, :plant] .== name, :storage_end]
             newp.storage_capacity = raw.plants[p, :storage_capacity]
             newp.d_max = raw.plants[p, :d_max]
         end
@@ -299,9 +301,9 @@ function set_model_horizon!(data::Data, split::Int)
 		end
 		z.net_export = z.net_export[timesteps]
 	end
-    for p in filter(plant -> isdefined(plant, :storage_level), data.plants)
-        p.storage_start = p.storage_level[split]
-        p.storage_end = split + 1 < length(p.storage_level) ? p.storage_level[split + 1] : p.storage_level[1]
+    for p in filter(plant -> isdefined(plant, :storage_level_start), data.plants)
+        p.storage_start = p.storage_level_start[split]
+        p.storage_end = p.storage_level_end[split]
     end
     for res in data.renewables
 		res.mu = res.mu[timesteps]
@@ -326,6 +328,10 @@ function set_model_horizon!(data::Data)
 	end
     for res in data.renewables
 		res.mu = res.mu[timesteps]
+		res.mu_rt = res.mu_rt[timesteps]
+        if isdefined(res, :mu_da)
+		    res.mu_da = res.mu_da[timesteps]
+        end
 		res.mu_heat = res.mu_heat[timesteps]
 		res.sigma = res.sigma[timesteps]
 		res.sigma_heat = res.sigma_heat[timesteps]

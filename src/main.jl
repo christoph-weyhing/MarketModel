@@ -14,7 +14,7 @@ Upper level functions to run the models. These are the functions exposed by Mark
 
 function set_logger()
 	# global_logger(ConsoleLogger(stdout, Logging.Info))
-	if isfile(pwd()*"/logs/RedundancyRemoval.log")
+	if isfile(pwd()*"/logs/MarketModel.log")
 		TeeLogger(MinLevelLogger(FileLogger(pwd()*"/logs/MarketModel.log", append=true), Logging.Info),
 		          ConsoleLogger(stdout, Logging.Info)) |> global_logger
 		@info("Logfile Found, logging to console and logfile.")
@@ -61,7 +61,7 @@ nothing, but the Result struct can be returned with optional argument `return_re
 """
 function run_market_model(data_dir::String, result_dir::String, input_optimizer;
 						  return_result::Bool=false, redispatch::Bool=false)
-	set_logger()
+	# set_logger()
 	@info("Read Model Data..")
 
 	options, data = read_model_data(data_dir)

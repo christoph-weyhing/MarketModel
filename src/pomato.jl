@@ -26,11 +26,13 @@ mutable struct Result
 	INFEASIBILITY_H_NEG::DataFrame
 	INFEASIBILITY_EL_POS::DataFrame
 	INFEASIBILITY_EL_NEG::DataFrame
+	INFEASIBILITY_ES::DataFrame
 	EB_nodal::DataFrame
 	EB_zonal::DataFrame
 	CURT::DataFrame
 	Alpha::DataFrame
 	CC_LINE_MARGIN::DataFrame
+	INFEASIBILITY_CC_LINES::DataFrame
 	G_RES::DataFrame
 	H_RES::DataFrame
 	COST_G::DataFrame
@@ -40,6 +42,7 @@ mutable struct Result
 	COST_REDISPATCH::DataFrame
 	COST_INFEASIBILITY_EL::DataFrame
 	COST_INFEASIBILITY_H::DataFrame
+	COST_INFEASIBILITY_ES::DataFrame
 	misc_results::Dict
 	function Result()
 		return new()
@@ -56,8 +59,8 @@ mutable struct POMATO
     ### Mappings and Sets
     n::NamedTuple{(:t, :zones, :nodes, :heatareas,
                    :plants, :res, :dc, :lines, :contingencies,
-                   :he, :chp, :es, :hs, :ph, :alpha, :cc_res)
-                    ,Tuple{Vararg{Int, 16}}}
+                   :he, :chp, :es, :hs, :ph, :alpha, :cc_res, :sbs, :srt)
+                    ,Tuple{Vararg{Int, 18}}}
 
     ## Plant Mappings
     mapping::NamedTuple{(:slack, # slacks to 1:n_nodes
@@ -68,8 +71,10 @@ mutable struct POMATO
                      :ph, # 1:N.ph to 1:N.he
                      :alpha, # 1:N.alpha to 1:N.he
                      :cc_res, # map 1:cc_res to 1:n_res
+					 :sbs, # map 1:N.sbs to 1:N.plants
+					 :srt, # map 1:N.sbs to 1:N.res (solar battery to corresponding solar rooftop)
 					 ),
-                    Tuple{Vararg{Vector{Int}, 8}}}
+                    Tuple{Vararg{Vector{Int}, 10}}}
 		function POMATO()
 			return new()
 		end
@@ -87,14 +92,19 @@ function POMATO(model::Model,
 	## Plant Mappings
 	# mapping heat index to G index
 	mapping_he = findall(plant -> plant.h_max > 0, data.plants)
+	mapping_sbs = findall(plant -> plant.plant_type in ["solar battery"], data.plants)
+
 	m.mapping = (slack = findall(node -> node.slack, data.nodes),
 			 he = mapping_he,
 			 chp = findall(plant -> ((plant.h_max > 0)&(plant.g_max > 0)), data.plants[mapping_he]),
 			 es = findall(plant -> plant.plant_type in options["plant_types"]["es"], data.plants),
 			 hs = findall(plant -> plant.plant_type in options["plant_types"]["hs"], data.plants[mapping_he]),
 			 ph = findall(plant -> plant.plant_type in options["plant_types"]["ph"], data.plants[mapping_he]),
-			 alpha = findall(plant -> plant.g_max > options["chance_constrained"]["alpha_plants_mw"], data.plants),
+			 alpha = findall(plant -> ((plant.g_max > options["chance_constrained"]["alpha_plants_mw"])&(plant.mc_el <= options["chance_constrained"]["alpha_plants_mc"])), data.plants),
 			 cc_res = findall(res_plants -> res_plants.g_max > options["chance_constrained"]["cc_res_mw"], data.renewables),
+			 sbs = mapping_sbs,
+			#  srt = [keys(data.renewables[(data.renewables.node.==sb.node)&(data.renewables.plant_type.=="solar rooftop")]) for sb in data.plants[mapping_sbs]]
+			 srt = [findall(res_plants -> (res_plants.node==sb.node)&(res_plants.plant_type=="solar rooftop"), data.renewables)[1] for sb in data.plants[mapping_sbs]]
 			 )
 
 	m.n = (t = size(data.t, 1),
@@ -112,7 +122,10 @@ function POMATO(model::Model,
 		   hs = size(m.mapping.hs, 1),
 		   ph = size(m.mapping.ph, 1),
 		   alpha = size(m.mapping.alpha, 1),
-		   cc_res = size(m.mapping.cc_res, 1))
+		   cc_res = size(m.mapping.cc_res, 1),
+		   sbs = size(m.mapping.sbs, 1),
+		   srt = size(m.mapping.srt, 1)
+		   )
 	return m
 end
 
