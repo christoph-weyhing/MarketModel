@@ -208,7 +208,7 @@ function add_electricity_storage_constraints!(pomato::POMATO)
 	# @constraint(model, [t=1:n.t],
 	# 	D_es[t, :] .<= [data.renewables[mapping.srt[sbs]].mu_rt for sbs in 1:n.sbs])
 	@constraint(model, [sbs=1:n.sbs],
-		D_es[:, sbs] .<= data.renewables[mapping.srt[sbs]].mu_rt)
+		D_es[:, sbs] .<= data.renewables[mapping.srt[sbs]].mu)
 	# # # END # # #
 
 	# lower bound on storage level in last timestep
