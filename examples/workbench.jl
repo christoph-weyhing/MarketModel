@@ -17,6 +17,12 @@ result_dir = (pwd()*"\\examples\\results\\")
 optimizer_package = Clp
 result = MarketModel.run_market_model(data_dir, result_dir, optimizer_package, return_result=true)
 
+# %% results analysis
+res_n3303_sb = res.D_es[in.(res.D_es.p, Ref(["n3303_electricity/solar battery"])), :]
+res_n3303_sb[1:15, "D_es"]
+
+# %% Data read in analysis
+
 # options = JSON.parsefile(data_dir*"options.json"; dicttype=Dict)
 raw = MarketModel.RAW(data_dir)
 
