@@ -65,6 +65,13 @@ function market_model(data::Data, options::Dict{String, Any})
 		add_ntc_constraints!(pomato)
 	end
 
+	### Christophs Code - Nodal Ausland mit NTC ###
+	if in(pomato.options["type"] , ["nodal"])
+		@info("Adding NTC Constraints...")
+		add_ntc_constraints!(pomato)
+	end
+	### End ###
+
 	if in(pomato.options["type"] , ["zonal", "cbco_zonal"])
 		if options["chance_constrained"]["include"]
 			@info("Adding FB-Chance Constraints...")
