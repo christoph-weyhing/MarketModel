@@ -189,7 +189,7 @@ function add_electricity_storage_constraints!(pomato::POMATO)
 	COST_INFEASIBILITY_ES = model[:COST_INFEASIBILITY_ES]
 
 	@variable(model, Dump_Water[1:n.t, 1:n.es] >= 0);
-	@variable(model, 0 <= INFEASIBILITY_ES[1:n.t, 1:n.es] <= 1e5);
+	@variable(model, 0 <= INFEASIBILITY_ES[1:n.t, 1:n.es] <= pomato.options["infeasibility"]["storages"]["bound"]);
 	# Electricity Storage Equations
 	storage_start(es) = data.plants[mapping.es[es]].storage_start*data.plants[mapping.es[es]].storage_capacity
 	@constraint(model, [t=1:n.t, es=1:n.es],
@@ -236,15 +236,6 @@ function add_electricity_generation_constraints!(pomato::POMATO)
 	# G Upper Bound
 	@constraint(model, [t=1:n.t],
 		G[t, :] .<= [data.plants[p].g_max * data.plants[p].availability  for p in 1:n.plants])
-
-	# # # Christophs Expiremental Code # # #
-	# G Upper Bound
-	# @constraint(model, [t=1:n.t, p=1:n.plants],
-	# 	G[t, p] <= data.plants[p].g_max)
-
-	# @constraint(model, [t=1:n.t],
-	# 	G[t, :] .<= [data.renewables[mapping.ts[ts]].g_max * data.renewables[mapping.ts[ts]].availability  for ts in 1:n.ts])
-	# # # END # # # 
 
 	# DC Lines Constraints
 	@constraint(model, [t=1:n.t],
@@ -596,22 +587,6 @@ function add_ntc_constraints!(pomato::POMATO, zones::Vector{Int})
 			EX[t, z, non_fb_zone] <= data.zones[z].ntc[non_fb_zone]
 		);
 	end
-end
-
-function add_net_position_constraints!(pomato::POMATO)
-	model, n, mapping, data = pomato.model, pomato.n, pomato.mapping, pomato.data
-	EX = model[:EX]
-	nex_zones = [z.index for z in data.zones if any(z.net_position .!== missing)]
-	@info("Including NEX Constraints for: "*join([data.zones[z].name*", " for z in nex_zones])[1:end-2])
-	# # Applies to nodal model for basecase calculation:
-	@constraint(model, [t=1:n.t, z=nex_zones], 
-		sum(EX[t, z, zz] - EX[t, zz, z] for zz in 1:n.zones)
-		<= data.zones[z].net_position[t] + 0.1*abs(data.zones[z].net_position[t])
-	);
-	@constraint(model, [t=1:n.t, z=nex_zones], 
-		sum(EX[t, z, zz] - EX[t, zz, z] for zz in 1:n.zones)
-		>= data.zones[z].net_position[t] - 0.1*abs(data.zones[z].net_position[t])
-	);
 end
 
 function create_alpha_loadflow_constraint(

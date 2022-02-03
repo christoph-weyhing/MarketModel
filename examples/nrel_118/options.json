@@ -1,11 +1,10 @@
 {
-  "type": "dispatch",
+  "type": "uniform",
   "model_horizon": [
     0,
     24
   ],
   "heat_model": false,
-  "constrain_nex": false,
   "timeseries": {
     "split": true,
     "type": "rt",
@@ -64,6 +63,7 @@
     "ph": []
   },
   "grid": {
+<<<<<<< HEAD
     "redundancy_removal_option": "clarkson_base",
     "precalc_filename": "",
     "include_contingencies_redispatch": false,
@@ -72,6 +72,15 @@
     "preprocess": true,
     "cbco_option": "clarkson_base",
     "gsk": "gmax"
+=======
+    "redundancy_removal_option": "conditional_redundancy_removal",
+    "precalc_filename": "",
+    "include_contingencies_redispatch": false,
+    "sensitivity": 0.05,
+    "short_term_rating_factor": 1,
+    "long_term_rating_factor": 1,
+    "preprocess": true
+>>>>>>> construction
   },
   "fbmc": {
     "gsk": "dynamic",
@@ -88,5 +97,10 @@
     "enforce_ntc_domain": true
   },
   "solver_options": {
+<<<<<<< HEAD
+=======
+    "name": "Clp", 
+    "solver_options": {}
+>>>>>>> construction
   }
 }
