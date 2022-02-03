@@ -3,28 +3,26 @@
   "type": "ntc",
   "model_horizon": [
     0,
-    168
+    2
   ],
   "heat_model": false,
   "constrain_nex": false,
   "timeseries": {
     "split": true,
-    "market_horizon": 168,
-    "redispatch_horizon": 168,
+    "market_horizon": 1000,
+    "redispatch_horizon": 24,
     "smooth_storage_level": false,
     "type": "da"
   },
   "redispatch": {
-    "include": true,
+    "include": false,
     "zonal_redispatch": false,
-    "zones": [
-      "DE"
-    ],
-    "cost": 50
+    "zones": [],
+    "cost": 1
   },
   "curtailment": {
-    "include": true,
-    "cost": 100
+    "include": false,
+    "cost": 100.0
   },
   "chance_constrained": {
     "include": false,
@@ -44,8 +42,8 @@
     },
     "electricity": {
       "include": true,
-      "cost": 500,
-      "bound": 1000000.0
+      "cost": 1000.0,
+      "bound": 20
     },
     "storages": {
       "include": true,
@@ -54,17 +52,9 @@
     }
   },
   "plant_types": {
-    "es": [
-      "hydro_psp",
-      "solar battery"
-    ],
+    "es": [],
     "hs": [],
-    "ts": [
-      "wind onshore",
-      "wind offshore",
-      "solar park",
-      "solar rooftop"
-    ],
+    "ts": [],
     "ph": []
   },
   "grid": {
