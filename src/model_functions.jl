@@ -254,6 +254,10 @@ function add_electricity_generation_constraints!(pomato::POMATO)
 	@constraint(model, [t=1:n.t],
 		G[t, :] .<= [data.plants[p].g_max * data.plants[p].availability  for p in 1:n.plants])
 
+	# G Lower Bound (only for plants with minimum generation level greater zero)
+	@constraint(model, g_min[t=1:n.t, p=mapping.g_min],
+		G[t, p] .>= data.plants[p].g_min)
+
 	# DC Lines Constraints
 	@constraint(model, [t=1:n.t],
 	    F_DC[t, :] .<= [data.dc_lines[dc].capacity for dc in 1:n.dc])

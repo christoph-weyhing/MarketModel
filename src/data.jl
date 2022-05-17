@@ -221,6 +221,7 @@ mutable struct Plant
     mc_el::Float64
     mc_heat::Float64
     g_max::Float64
+    g_min::Float64
     d_max::Float64
     h_max::Float64
     eta::Float64
@@ -242,6 +243,7 @@ mutable struct Plant
                    eta::Float64,
                    availability::Float64,
                    g_max::Float64,
+                   g_min::Float64,
                    h_max::Float64,
                    plant_type::Any)
         p = new()
@@ -253,6 +255,7 @@ mutable struct Plant
         p.eta = eta
         p.availability = availability
         p.g_max = g_max
+        p.g_min = g_min
         p.h_max = h_max
         p.plant_type = plant_type
         return p

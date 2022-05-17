@@ -62,7 +62,7 @@ mutable struct POMATO
     n::NamedTuple{(
 		:t, :zones, :nodes, :heatareas,
         :plants, :res, :dc, :lines, :contingencies,
-        :he, :chp, :es, :hs, :ph, :alpha, :cc_res), Tuple{Vararg{Int, 16}}}
+        :he, :chp, :es, :hs, :ph, :alpha, :cc_res, :g_min), Tuple{Vararg{Int, 17}}}
 
     ## Plant Mappings
     mapping::NamedTuple{(
@@ -74,7 +74,8 @@ mutable struct POMATO
         :ph, # 1:N.ph to 1:N.he
         :alpha, # 1:N.alpha to 1:N.he
         :cc_res, # map 1:cc_res to 1:n_res
-		), Tuple{Vararg{Vector{Int}, 8}}}
+		:g_min,	# 1:N.g_min to 1:N.plants, maps plants with minimum generation to plants
+		), Tuple{Vararg{Vector{Int}, 9}}}
 		function POMATO()
 			return new()
 		end
@@ -104,6 +105,7 @@ function POMATO(model::Model, data::Data)
 		cc_res = findall(res_plants -> (
 			res_plants.g_max > m.options["chance_constrained"]["cc_res_mw"]
 			), data.renewables),
+		g_min = findall(plant -> plant.g_min != zero(plant.g_min), data.plants),
 	)
 
 	m.n = (t = size(data.t, 1),
@@ -121,7 +123,8 @@ function POMATO(model::Model, data::Data)
 		   hs = size(m.mapping.hs, 1),
 		   ph = size(m.mapping.ph, 1),
 		   alpha = size(m.mapping.alpha, 1),
-		   cc_res = size(m.mapping.cc_res, 1))
+		   cc_res = size(m.mapping.cc_res, 1),
+		   g_min = size(m.mapping.g_min, 1))	# number of plants with minimum generation constraint
 	return m
 end
 
