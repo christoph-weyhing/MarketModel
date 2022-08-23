@@ -97,11 +97,11 @@ function POMATO(model::Model, data::Data)
 	m.mapping = (slack = findall(node -> node.slack, data.nodes),
 			 he = mapping_he,
 			 chp = findall(plant -> ((plant.h_max > 0)&(plant.g_max > 0)), data.plants[mapping_he]),
-			 es = findall(plant -> plant.plant_type in options["plant_types"]["es"], data.plants),
-			 hs = findall(plant -> plant.plant_type in options["plant_types"]["hs"], data.plants[mapping_he]),
-			 ph = findall(plant -> plant.plant_type in options["plant_types"]["ph"], data.plants[mapping_he]),
-			 alpha = findall(plant -> ((plant.g_max > options["chance_constrained"]["alpha_plants_mw"])&(plant.mc_el <= options["chance_constrained"]["alpha_plants_mc"])), data.plants),
-			 cc_res = findall(res_plants -> res_plants.g_max > options["chance_constrained"]["cc_res_mw"], data.renewables),
+			 es = findall(plant -> plant.plant_type in m.options["plant_types"]["es"], data.plants),
+			 hs = findall(plant -> plant.plant_type in m.options["plant_types"]["hs"], data.plants[mapping_he]),
+			 ph = findall(plant -> plant.plant_type in m.options["plant_types"]["ph"], data.plants[mapping_he]),
+			 alpha = findall(plant -> ((plant.g_max > m.options["chance_constrained"]["alpha_plants_mw"])&(plant.mc_el <= m.options["chance_constrained"]["alpha_plants_mc"])), data.plants),
+			 cc_res = findall(res_plants -> res_plants.g_max > m.options["chance_constrained"]["cc_res_mw"], data.renewables),
 			 sbs = mapping_sbs,
 			#  srt = [keys(data.renewables[(data.renewables.node.==sb.node)&(data.renewables.plant_type.=="solar rooftop")]) for sb in data.plants[mapping_sbs]]
 			 srt = [findall(res_plants -> (res_plants.node==sb.node)&(res_plants.plant_type=="solar rooftop"), data.renewables)[1] for sb in data.plants[mapping_sbs]]
