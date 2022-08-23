@@ -14,7 +14,7 @@ Processing of input data and populating data structs.
 function read_model_data(data_dir::String)
     @info("Reading Model Data from: $(data_dir)")
     raw = RAW(data_dir)
-
+    
     nodes = populate_nodes(raw)
     zones = populate_zones(raw, nodes)
     heatareas = populate_heatareas(raw)

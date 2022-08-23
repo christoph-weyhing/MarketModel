@@ -233,6 +233,12 @@ version = "0.10.25"
 deps = ["Random"]
 uuid = "9fa8497b-333b-5362-9e8d-4d0656e87820"
 
+[[Gurobi]]
+deps = ["CEnum", "Libdl", "MathOptInterface"]
+git-tree-sha1 = "aac05324d46b53289ccb05510b05b4a56ffd3ed5"
+uuid = "2e9cd046-0924-5485-92f1-d5272153d98b"
+version = "0.9.14"
+
 [[HTTP]]
 deps = ["Base64", "Dates", "IniFile", "Logging", "MbedTLS", "NetworkOptions", "Sockets", "URIs"]
 git-tree-sha1 = "0fa77022fe4b511826b39c894c90daf5fce3334a"
