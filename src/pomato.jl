@@ -27,6 +27,7 @@ mutable struct Result
 	INFEASIBILITY_EL_POS::DataFrame
 	INFEASIBILITY_EL_NEG::DataFrame
 	INFEASIBILITY_ES::DataFrame
+	Dump_Water::DataFrame
 	EB_nodal::DataFrame
 	EB_zonal::DataFrame
 	CURT::DataFrame
@@ -81,14 +82,12 @@ mutable struct POMATO
 		end
 end
 
-function POMATO(model::Model,
-				data::Data,
-				options::Dict{String, Any})
+function POMATO(model::Model, data::Data)
 
 	m = POMATO()
 	m.model = model
 	m.data = data
-	m.options = options
+	m.options = data.options
 
 	## Plant Mappings
 	# mapping heat index to G index
