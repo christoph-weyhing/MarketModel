@@ -67,11 +67,13 @@ function market_model(data)
 	end
 
 
-	### Christophs Code - Nodal Ausland mit NTC ###
-	if in(pomato.options["type"] , ["nodal"])
-		@info("Adding NTC Constraints to nodal approach...")
-		add_ntc_constraints!(pomato)
-	end
+	### Christophs Code - Nodal Ausland mit NTC --> INHALTLICH FALSCH, DAHER AUSKOMMENTIERT ###
+	### Für den Typ "opf" (früher "nodal", hier also veraltet) dient EX nur zum bilanziellen Ausgleich...\ ###
+	### ...der zonalen Energiebilanz  und hat ansonsten keine tiefere Bedeutung ###
+	# if in(pomato.options["type"] , ["nodal"])
+	# 	@info("Adding NTC Constraints to nodal approach...")
+	# 	add_ntc_constraints!(pomato)
+	# end
 	### End ###
 
 	if in(pomato.options["type"] , ["fbmc"])
